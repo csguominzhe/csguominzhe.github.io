@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Minzhe Guo</title>
+    <meta
+      name="description"
+      content="Minzhe Guo's personal homepage: bio, selected publications, and honors."
+    />
+    <script>
+      (() => {
+        const stored = localStorage.getItem("theme");
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme =
+          stored === "light" || stored === "dark"
+            ? stored
+            : prefersDark
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="container topnav" aria-label="Primary">
+        <a class="topnav-item" href="#about" aria-current="page">About</a>
+        <a class="topnav-item" href="#publications">Publications</a>
+        <a class="topnav-item" href="#awards">Others</a>
+        <button
+          class="theme-toggle"
+          type="button"
+          id="theme-toggle"
+          aria-label="Toggle theme"
+        >
+          <svg
+            class="theme-icon icon-moon"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-hidden="true"
+          >
+            <path
+              d="M21 14.1A8.5 8.5 0 0 1 9.9 3a7 7 0 1 0 11.1 11.1Z"
+            />
+          </svg>
+          <svg
+            class="theme-icon icon-sun"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12Zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM4 11a1 1 0 0 1 0 2H3a1 1 0 1 1 0-2h1Zm18 0a1 1 0 0 1 0 2h-1a1 1 0 1 1 0-2h1ZM5.6 5.6a1 1 0 0 1 1.4 0l.7.7a1 1 0 1 1-1.4 1.4l-.7-.7a1 1 0 0 1 0-1.4Zm12.1 12.1a1 1 0 0 1 1.4 0l.7.7a1 1 0 0 1-1.4 1.4l-.7-.7a1 1 0 0 1 0-1.4ZM18.4 5.6a1 1 0 0 1 0 1.4l-.7.7a1 1 0 1 1-1.4-1.4l.7-.7a1 1 0 0 1 1.4 0ZM7.7 16.3a1 1 0 0 1 0 1.4l-.7.7a1 1 0 0 1-1.4-1.4l.7-.7a1 1 0 0 1 1.4 0Z"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="about" class="intro" aria-labelledby="about-title">
+        <div class="intro-left">
+          <h1 id="about-title">Minzhe Guo</h1>
+          <p class="tagline">
+            Guangdong University of Technology · Undergraduate (Year 2), Computer
+            Science and Technology
+          </p>
+
+          <div class="icon-links" aria-label="Links">
+            <a
+              class="icon"
+              href="mailto:%63%61%70%79%6e%74%40%67%6d%61%69%6c%2e%63%6f%6d"
+              aria-label="Email"
+            >
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path
+                  d="M6 6h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Zm0 2 6 4 6-4H6Zm12 1.2-6 4-6-4V16h12V9.2Z"
+                />
+              </svg>
+            </a>
+            <a
+              class="icon"
+              href="https://github.com/csguominzhe"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path
+                  d="M12 .5C5.73.5.7 5.73.7 12.2c0 5.2 3.34 9.62 7.97 11.18.58.11.79-.26.79-.57v-2.07c-3.24.73-3.92-1.6-3.92-1.6-.53-1.39-1.29-1.76-1.29-1.76-1.06-.75.08-.74.08-.74 1.17.08 1.78 1.24 1.78 1.24 1.04 1.84 2.73 1.31 3.4 1 .1-.77.4-1.31.73-1.61-2.59-.3-5.31-1.33-5.31-5.93 0-1.31.45-2.39 1.19-3.23-.12-.3-.52-1.52.11-3.17 0 0 .98-.32 3.2 1.23.93-.26 1.93-.39 2.92-.4.99.01 1.99.14 2.92.4 2.22-1.55 3.2-1.23 3.2-1.23.63 1.65.23 2.87.11 3.17.74.84 1.19 1.92 1.19 3.23 0 4.61-2.72 5.62-5.32 5.92.41.37.78 1.09.78 2.2v3.26c0 .31.21.68.8.57 4.62-1.56 7.96-5.98 7.96-11.18C23.3 5.73 18.27.5 12 .5Z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <p class="about-text">
+            I am a second-year undergraduate student majoring in Computer Science
+            and Technology at Guangdong University of Technology. I program
+            primarily in Python, C, and C++, and I scored 591 on CET-4 and 537 on
+            CET-6. My current interests include computer vision, image editing,
+            diffusion models, and vision-language models.
+          </p>
+        </div>
+      </section>
+
+      <section id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Selected Publications</h2>
+        <ol class="pubs">
+          <li class="pub">
+            <div class="pub-title">
+              ChordEdit: One-Step Low-Energy Transport for Image Editing
+              <span class="pub-links">
+                ·
+                <a
+                  href="https://chordedit.github.io/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Project page"
+                >
+                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <path
+                      d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"
+                    />
+                  </svg>
+                </a>
+              </span>
+            </div>
+            <div class="pub-badges" aria-label="Venue and tags">
+              <span class="badge">CVPR 2026</span>
+              <span class="badge badge--em">Oral</span>
+              <span class="badge badge--em">Top 1%</span>
+              <span class="badge badge--em">CCF-A</span>
+            </div>
+            <div class="pub-authors">
+              Liangsi Lu, Xuhang Chen, <strong>Minzhe Guo</strong>, Shichu Li,
+              Jingchao Wang, Yang Shi
+            </div>
+          </li>
+
+          <li class="pub">
+            <div class="pub-title">Semantic Granularity Navigation in Image Editing</div>
+            <div class="pub-badges" aria-label="Venue and tags">
+              <span class="badge">ICML 2026</span>
+              <span class="badge">Regular</span>
+              <span class="badge badge--em">CCF-A</span>
+            </div>
+            <div class="pub-authors">
+              Liangsi Lu, <strong>Minzhe Guo</strong>, Xuhang Chen, Yang Shi
+            </div>
+          </li>
+
+          <li class="pub">
+            <div class="pub-title">
+              MMErroR: A Benchmark for Erroneous Reasoning in Vision-Language Models
+              <span class="pub-links">
+                ·
+                <a
+                  href="https://mmerror-benchmark.github.io/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Project page"
+                >
+                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <path
+                      d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"
+                    />
+                  </svg>
+                </a>
+              </span>
+            </div>
+            <div class="pub-badges" aria-label="Venue and tags">
+              <span class="badge">ACL 2026 (Main)</span>
+              <span class="badge badge--em">CCF-A</span>
+            </div>
+            <div class="pub-authors">
+              Yang Shi, Yifeng Xie, <strong>Minzhe Guo</strong>, Liangsi Lu,
+              Mingxuan Huang, Jingchao Wang, Zhihong Zhu, Boyan Xu, Zhiqi Huang
+            </div>
+          </li>
+
+          <li class="pub">
+            <div class="pub-title">
+              PC-UNet: An Enforcing Poisson Statistics U-Net for Positron Emission Tomography Denoising
+            </div>
+            <div class="pub-badges" aria-label="Venue and tags">
+              <span class="badge">BIBM 2025</span>
+              <span class="badge">CCF-B</span>
+            </div>
+            <div class="pub-authors">
+              Yang Shi, Jingchao Wang, Liangsi Lu, Mingxuan Huang, Ruixin He,
+              Yifeng Xie, Hanqian Liu, <strong>Minzhe Guo</strong>, Yangyang Liang,
+              Weipeng Zhang, Zimeng Li, Xuhang Chen
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="awards" aria-labelledby="awards-title">
+        <h2 id="awards-title">Honors &amp; Awards</h2>
+        <ul>
+          <li>Silver Medal, ICPC Asia Xi'an Regional Contest (2025)</li>
+          <li>Bronze Medal, ICPC Asia Nanjing Regional Contest (2025)</li>
+          <li>Silver Medal, ICPC Guizhou Provincial Programming Contest (2025)</li>
+          <li>First Prize, Guangdong Provincial Mathematical Modeling Contest (2025)</li>
+          <li>First Prize (Provincial), The 16th Lanqiao Cup (2025)</li>
+          <li>First Prize (National), RuiKang Competition (2025)</li>
+          <li>Silver Award (National), Matiji Cup (2025)</li>
+        </ul>
+      </section>
+    </main>
+
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const toggle = document.getElementById("theme-toggle");
+        if (!toggle) return;
+
+        const setLabel = () => {
+          const theme = root.dataset.theme;
+          toggle.setAttribute(
+            "aria-label",
+            theme === "dark" ? "Switch to light mode" : "Switch to dark mode",
+          );
+        };
+
+        setLabel();
+
+        toggle.addEventListener("click", () => {
+          const next = root.dataset.theme === "dark" ? "light" : "dark";
+          root.dataset.theme = next;
+          localStorage.setItem("theme", next);
+          setLabel();
+        });
+      })();
+    </script>
+  </body>
+</html>
